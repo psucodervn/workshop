@@ -36,3 +36,6 @@ yarn dev
 
 ## Handout
 https://github.com/grokking-vietnam/workshop/blob/be001/result/be001/handout.md
+
+## Postman collection
+https://github.com/grokking-vietnam/workshop/blob/be001/result/be001/BE001.postman_collection.json
