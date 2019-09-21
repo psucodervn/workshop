@@ -18,6 +18,44 @@ const router = new Router();
  *        type: string
  *      price:
  *        type: number
+ *      category:
+ *        type: object
+ *        schema:
+ *          $ref: '#/definitions/Category'
+ */
+
+/**
+ * @swagger
+ *
+ * definitions:
+ *  ProductCreate:
+ *    type: object
+ *    properties:
+ *      name:
+ *        type: string
+ *      description:
+ *        type: string
+ *      price:
+ *        type: number
+ *      categoryId:
+ *        type: string
+ */
+
+/**
+ * @swagger
+ *
+ * definitions:
+ *  ProductUpdate:
+ *    type: object
+ *    properties:
+ *      name:
+ *        type: string
+ *      description:
+ *        type: string
+ *      price:
+ *        type: number
+ *      categoryId:
+ *        type: string
  */
 
 
@@ -69,7 +107,7 @@ router.get('/:id', show);
  *        in:  body
  *        type: string
  *        schema:
- *          $ref: '#/definitions/Product'
+ *          $ref: '#/definitions/ProductCreate'
  *     produces:
  *      - application/json
  *     responses:
@@ -98,7 +136,7 @@ router.post('/', create);
  *        required: true
  *        type: string
  *        schema:
- *          $ref: '#/definitions/Product'
+ *          $ref: '#/definitions/ProductUpdate'
  *     produces:
  *      - application/json
  *     responses:

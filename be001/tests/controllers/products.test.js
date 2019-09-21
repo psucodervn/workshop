@@ -38,6 +38,8 @@ describe('Products controller', () => {
       expect(response.body.name).toEqual(sample.name);
       expect(response.body.description).toEqual(sample.description);
       expect(response.body.price).toEqual(sample.price);
+      // we are expecting our api result to have this new field
+      expect(response.body).toHaveProperty('category');
     });
   });
 

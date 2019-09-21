@@ -4,8 +4,12 @@ export default (sequelize, DataTypes) => {
     description: DataTypes.TEXT,
     price: DataTypes.INTEGER,
   }, {});
-  // Product.associate = (models) => {
-  //   // associations can be defined here
-  // };
+  // define the relationship
+  Product.associate = (models) => {
+    Product.belongsTo(models.Category, {
+      foreignKey: 'categoryId',
+      as: 'category',
+    });
+  };
   return Product;
 };
